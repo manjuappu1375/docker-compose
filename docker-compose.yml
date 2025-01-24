@@ -2,8 +2,7 @@ version: "3"
 
 services:
   web-app-1:
-    build:
-     - context: /home/ubuntu/HIGHWAY-static-web-application/
+    image: manjuappu1375/highway
     container_name: web-app-1
     ports:
       - 81:80
@@ -11,8 +10,7 @@ services:
       - web1_data:/usr/share/nginx/html
 
   web-app-2:
-    build:
-     - context: /home/ubuntu/mini-finance-/
+    image: manjuappu1375/minifin
     container_name: web-app-2
     ports:
       - 82:80
@@ -20,8 +18,7 @@ services:
       - web2_data:/usr/share/nginx/html
 
   web-app-3:
-    build:
-     - context: /home/ubuntumoso_interior/
+    image: manjuappu1375/mosoin
     container_name: web-app-3
     ports:
       - 83:80
