@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  web-app-1:
+    build:
+     - context: /home/ubuntu/HIGHWAY-static-web-application/
+    container_name: web-app-1
+    ports:
+      - 81:80
+    volumes:
+      - web1_data:/usr/share/nginx/html
+
+  web-app-2:
+    build:
+     - context: /home/ubuntu/mini-finance-/
+    container_name: web-app-2
+    ports:
+      - 82:80
+    volumes:
+      - web2_data:/usr/share/nginx/html
+
+  web-app-3:
+    build:
+     - context: /home/ubuntumoso_interior/
+    container_name: web-app-3
+    ports:
+      - 83:80
+    volumes:
+      - web3_data:/usr/share/nginx/html
+
+volumes:
+  web1_data:
+  web2_data:
+  web3_data:
